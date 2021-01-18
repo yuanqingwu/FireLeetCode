@@ -13,12 +13,12 @@ import java.util.HashMap;
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
  */
-public class TwoSum extends BaseSolution {
+public class _1TwoSum extends BaseSolution {
 
     public static void main(String[] args) {
 
-        TwoSum twoSum = new TwoSum();
-        twoSum.run();
+        _1TwoSum a1TwoSum = new _1TwoSum();
+        a1TwoSum.run();
 
     }
 
