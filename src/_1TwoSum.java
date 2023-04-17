@@ -28,7 +28,7 @@ public class _1TwoSum extends BaseSolution {
         int target = 9;
         int[] res = twoSum(nums, target);
 
-        System.out.println("wyq:" + Arrays.toString(res));
+        println(Arrays.toString(res));
     }
 
 

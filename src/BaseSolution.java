@@ -1,5 +1,11 @@
 public abstract class BaseSolution {
 
+    public static final String TAG = "firecode";
+
+
+    public void println(String msg){
+        System.out.println(TAG + " "+ msg);
+    }
 
     public void run() {
 
@@ -7,7 +13,7 @@ public abstract class BaseSolution {
         solution();
         long end = System.nanoTime();
 
-        System.out.println("cost time:" + (end - start) + " ns");
+        println(" cost time:" + (end - start) + " ns");
     }
 
     abstract void solution();
