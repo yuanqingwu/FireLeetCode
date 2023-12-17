@@ -1,3 +1,4 @@
+import data.TreeNode;
 
 /**
  * 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。
@@ -24,34 +25,7 @@ public class _226_InvertTree extends BaseSolution {
         println(res1.toString());
     }
 
-    /**
-     * Definition for a binary tree node.
-     */
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-
-        @Override
-        public String toString() {
-            // return "TreeNode [val=" + val + ", left=" + left + ", right=" + right + "]";
-            return "[" + val + "," + left + "," + right + "]";
-        }
-
-    }
 
     public TreeNode invertTree(TreeNode root) {
 
