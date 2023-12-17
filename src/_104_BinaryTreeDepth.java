@@ -1,3 +1,5 @@
+import data.TreeNode;
+
 /**
  * 给定一个二叉树 root ，返回其最大深度。
  * 二叉树的 最大深度 是指从根节点到最远叶子节点的最长路径上的节点数。
@@ -20,28 +22,6 @@ public class _104_BinaryTreeDepth extends BaseSolution {
         println("depth:" + depth);
         assert depth == 3;
 
-    }
-
-    /**
-     * Definition for a binary tree node.
-     */
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 
     public int maxDepth(TreeNode root) {
