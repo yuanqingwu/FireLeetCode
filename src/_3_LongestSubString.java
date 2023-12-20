@@ -1,25 +1,31 @@
 import java.util.HashMap;
 
+import tag.HashTable;
+import tag.SlidingWindow;
+import tag.Strings;
+
 /*
  * Given a string, find the length of the longest substring without repeating characters.
- * Examples:
  * 
+ * Examples:
  * Given "abcabcbb", the answer is "abc", which the length is 3.
  * Given "bbbbb", the answer is "b", with the length of 1.
  * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  * Tags: Hash Table, Two Pointers, String
  * 
- * 解题思路：滑动窗口
+ * Constraints:
+ * - 0 <= s.length <= 5 * 104
+ * - s consists of English letters, digits, symbols and spaces.
  * 
- * 时间复杂度：O(n)
- * 空间复杂度：O(m)  m为字符空间
  */
-public class _3LongestSubString extends BaseSolution {
-
+@HashTable
+@Strings
+@SlidingWindow
+public class _3_LongestSubString extends BaseSolution {
 
     public static void main(String[] args) {
-        _3LongestSubString longestSubString = new _3LongestSubString();
+        _3_LongestSubString longestSubString = new _3_LongestSubString();
         longestSubString.run();
     }
 
@@ -27,14 +33,17 @@ public class _3LongestSubString extends BaseSolution {
     void solution() {
 
         String test1 = "abcabcbb";
-        println("length : "+lengthOfLongestSubstring(test1));
+        int length1 = lengthOfLongestSubstring(test1);
+        assert length1 == 3;
 
         String test2 = "bbbbb";
-        println("length : "+lengthOfLongestSubstring(test2));
+        int length2 = lengthOfLongestSubstring(test2);
+        assert length2 == 1;
 
         String test3 = "pwwkew";
-        println("length : "+lengthOfLongestSubstring(test3));
-        
+        int length3 = lengthOfLongestSubstring(test3);
+        assert length3 == 3;
+
     }
 
     public int lengthOfLongestSubstring(String s) {
