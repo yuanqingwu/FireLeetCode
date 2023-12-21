@@ -40,9 +40,8 @@ import java.util.Arrays;
  */
 public class _88MergeSortedArray extends BaseSolution {
 
-
     public static void main(String[] args) {
-        
+
         _88MergeSortedArray mergeSortedArray = new _88MergeSortedArray();
         mergeSortedArray.run();
     }
@@ -57,7 +56,7 @@ public class _88MergeSortedArray extends BaseSolution {
         int n = 3;
         merge(nums1, m, nums2, n);
 
-        println(" res:"+Arrays.toString(nums1));
+        println(" res:" + Arrays.toString(nums1));
 
     }
 

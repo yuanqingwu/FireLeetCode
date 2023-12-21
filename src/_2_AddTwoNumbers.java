@@ -1,6 +1,6 @@
 import data.ListNode;
 import tag.LinkedList;
-import tag.Math;
+import tag.MathTag;
 import tag.Recursion;
 
 /**
@@ -26,7 +26,7 @@ import tag.Recursion;
  * 使用预先指针的目的在于链表初始化时无可用节点值，而且链表构造过程需要指针移动，进而会导致头指针丢失，无法返回结果。
  */
 @LinkedList
-@Math
+@MathTag
 @Recursion
 public class _2_AddTwoNumbers extends BaseSolution {
 

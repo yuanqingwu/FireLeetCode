@@ -1,3 +1,7 @@
+import tag.DynamicProgramming;
+import tag.MathTag;
+import tag.Memoization;
+
 /**
  * You are climbing a staircase. It takes n steps to reach the top.
  * 
@@ -31,12 +35,14 @@
  * - 通过数学公式直接计算
  * 
  */
-public class _70ClimbingStairs extends BaseSolution {
+@DynamicProgramming
+@Memoization
+@MathTag
+public class _70_ClimbingStairs extends BaseSolution {
 
+    public static void main(String[] args) {
 
-    public static void main(String[] args){
-
-        _70ClimbingStairs climbingStairs = new _70ClimbingStairs();
+        _70_ClimbingStairs climbingStairs = new _70_ClimbingStairs();
         climbingStairs.run();
 
     }
@@ -45,11 +51,11 @@ public class _70ClimbingStairs extends BaseSolution {
     void solution() {
 
         int res = climbStairs(2);
-        println("climbingStairs: "+res);
+        println("climbingStairs: " + res);
         assert res == 3;
 
         int res1 = climbStairs(45);
-        println("climbingStairs: "+res1);
+        println("climbingStairs: " + res1);
         assert res1 == 1836311903;
 
     }
