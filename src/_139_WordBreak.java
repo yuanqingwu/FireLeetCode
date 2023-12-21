@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -169,61 +168,4 @@ public class _139_WordBreak extends BaseSolution {
         }
         return false;
     }
-
-    @BFS_BreadthFirstSearch
-    public boolean wordBreak_BFS(String s, List<String> wordDict) {
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(0);
-
-        int slength = s.length();
-        boolean[] visited = new boolean[slength + 1];
-
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
-                int start = queue.poll().intValue();
-                for (String word : wordDict) {
-                    int nextStart = start + word.length();
-                    if (nextStart > slength || visited[nextStart]) {
-                        continue;
-                    }
-
-                    if (s.indexOf(word, start) == start) {
-                        if (nextStart == slength) {
-                            return true;
-                        }
-
-                        queue.add(nextStart);
-                        visited[nextStart] = true;
-                    }
-                }
-            }
-        }
-
-        return false;
-    }
-
-    @DFS_DepthFirstSearch
-    public boolean wordBreak_DFS(String s, List<String> wordDict) {
-        boolean[] visited = new boolean[s.length() + 1];
-        return dfs(s, 0, wordDict, visited);
-    }
-
-    private boolean dfs(String s, int start, List<String> wordDict, boolean[] visited) {
-        for (String word : wordDict) {
-            int nextStart = start + word.length();
-            if (nextStart > s.length() || visited[nextStart]) {
-                continue;
-            }
-
-            if (s.indexOf(word, start) == start) {
-                if (nextStart == s.length() || dfs(s, nextStart, wordDict, visited)) {
-                    return true;
-                }
-                visited[nextStart] = true;
-            }
-        }
-        return false;
-    }
-
 }
