@@ -1,8 +1,19 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
+
+import tag.Array;
+import tag.BFS_BreadthFirstSearch;
+import tag.DFS_DepthFirstSearch;
+import tag.DynamicProgramming;
+import tag.HashTable;
+import tag.Memoization;
+import tag.Strings;
+import tag.Trie;
 
 /**
  * Given a string s and a dictionary of strings wordDict, return true if s can
@@ -46,10 +57,18 @@ import java.util.Set;
  * 这个子串恰好也出现在字典中，那么状态 dp[i] 就为 true。
  * 
  */
-public class _139WordBreak extends BaseSolution {
+@DynamicProgramming
+@Strings
+@HashTable
+@Array
+@Memoization
+@Trie
+@DFS_DepthFirstSearch
+@BFS_BreadthFirstSearch
+public class _139_WordBreak extends BaseSolution {
 
     public static void main(String[] args) {
-        _139WordBreak wordBreak = new _139WordBreak();
+        _139_WordBreak wordBreak = new _139_WordBreak();
         wordBreak.run();
     }
 
@@ -85,6 +104,62 @@ public class _139WordBreak extends BaseSolution {
             }
         }
         return dp[s.length()];
+    }
+
+    @BFS_BreadthFirstSearch
+    public boolean wordBreak_BFS(String s, List<String> wordDict) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(0);
+
+        int slength = s.length();
+        boolean[] visited = new boolean[slength + 1];
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                int start = queue.poll().intValue();
+                for (String word : wordDict) {
+                    int nextStart = start + word.length();
+                    if (nextStart > slength || visited[nextStart]) {
+                        continue;
+                    }
+
+                    if (s.indexOf(word, start) == start) {
+                        if (nextStart == slength) {
+                            return true;
+                        }
+
+                        queue.add(nextStart);
+                        visited[nextStart] = true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+    @DFS_DepthFirstSearch
+    public boolean wordBreak_DFS(String s, List<String> wordDict) {
+        boolean[] visited = new boolean[s.length() + 1];
+        return dfs(s, 0, wordDict, visited);
+    }
+
+    private boolean dfs(String s, int start, List<String> wordDict, boolean[] visited) {
+        for (String word : wordDict) {
+            int nextStart = start + word.length();
+            if (nextStart > s.length() || visited[nextStart]) {
+                continue;
+            }
+
+            if (s.indexOf(word, start) == start) {
+                if (nextStart == s.length() || dfs(s, nextStart, wordDict, visited)) {
+                    return true;
+                }
+                visited[nextStart] = true;
+            }
+        }
+        return false;
     }
 
 }

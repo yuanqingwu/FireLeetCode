@@ -1,10 +1,29 @@
 import data.TreeNode;
+import tag.BFS_BreadthFirstSearch;
+import tag.BinaryTree;
+import tag.DFS_DepthFirstSearch;
+import tag.Recursion;
+import tag.Tree;
 
 /**
+ * Given the root of a binary tree, invert the tree, and return its root.
  * 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。
+ * 
+ * Example:
+ * Input: root = [4,2,7,1,3,6,9]
+ * Output: [4,7,2,9,6,3,1]
+ * 
+ * Constraints:
+ * The number of nodes in the tree is in the range [0, 100].
+ * -100 <= Node.val <= 100
  * 
  * 解题思路：递归交换左右子树。
  */
+@Tree
+@DFS_DepthFirstSearch
+@BFS_BreadthFirstSearch
+@BinaryTree
+@Recursion
 public class _226_InvertTree extends BaseSolution {
 
     public static void main(String args[]) {
@@ -24,8 +43,6 @@ public class _226_InvertTree extends BaseSolution {
         TreeNode res1 = invertTree(root1);
         println(res1.toString());
     }
-
-
 
     public TreeNode invertTree(TreeNode root) {
 
