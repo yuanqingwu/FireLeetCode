@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.HashMap;
 
 import tag.HashTable;
@@ -34,15 +36,15 @@ public class _3_LongestSubString extends BaseSolution {
 
         String test1 = "abcabcbb";
         int length1 = lengthOfLongestSubstring(test1);
-        assert length1 == 3;
+        assertEquals(3, length1);
 
         String test2 = "bbbbb";
         int length2 = lengthOfLongestSubstring(test2);
-        assert length2 == 1;
+        assertEquals(1, length2);
 
         String test3 = "pwwkew";
         int length3 = lengthOfLongestSubstring(test3);
-        assert length3 == 3;
+        assertEquals(3, length3);
 
     }
 

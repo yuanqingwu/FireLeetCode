@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import tag.DynamicProgramming;
 import tag.MathTag;
 import tag.Memoization;
@@ -52,11 +54,11 @@ public class _70_ClimbingStairs extends BaseSolution {
 
         int res = climbStairs(2);
         println("climbingStairs: " + res);
-        assert res == 3;
+        assertEquals(2, res);
 
         int res1 = climbStairs(45);
         println("climbingStairs: " + res1);
-        assert res1 == 1836311903;
+        assertEquals(1836311903, res1);
 
     }
 

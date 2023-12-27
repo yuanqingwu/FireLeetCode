@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import tag.Array;
 import tag.TwoPointers;
 
@@ -62,11 +64,11 @@ public class _26_80_RemoveDuplicates extends BaseSolution {
 
         int[] nums1 = new int[] { 1, 1, 2, 2, 2, 2, 3, 4, 4 };
         int res1 = removeDuplicates(nums1, 1);
-        assert res1 == 4;
+        assertEquals(4, res1);
 
         int[] nums2 = new int[] { 1, 1, 2, 2, 2, 2, 3, 4, 4 };
         int res2 = removeDuplicates(nums2, 2);
-        assert res2 == 7;
+        assertEquals(7, res2);
 
     }
 

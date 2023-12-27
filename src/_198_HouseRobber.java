@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import tag.Array;
 import tag.DynamicProgramming;
 
@@ -61,7 +63,7 @@ public class _198_HouseRobber extends BaseSolution {
         int[] test1 = new int[] { 2, 7, 9, 3, 1 };
         int res = rob(test1);
         println("res:" + res);
-        assert res == 11;
+        assertEquals(11, res);
 
     }
 

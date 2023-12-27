@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -38,7 +40,7 @@ public class _104_BinaryTreeDepth extends BaseSolution {
         TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
         int depth = maxDepth(root);
         println("depth:" + depth);
-        assert depth == 3;
+        assertEquals(3, depth);
 
     }
 

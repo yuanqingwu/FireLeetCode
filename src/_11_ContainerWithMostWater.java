@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import tag.Array;
 import tag.Greedy;
 import tag.TwoPointers;
@@ -36,10 +38,10 @@ public class _11_ContainerWithMostWater extends BaseSolution {
     @Override
     void solution() {
         int[] height1 = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-        assert maxArea(height1) == 49;
+        assertEquals(49, maxArea(height1));
 
         int[] height2 = new int[] { 1, 1 };
-        assert maxArea(height2) == 1;
+        assertEquals(1, maxArea(height2));
     }
 
     public int maxArea(int[] height) {

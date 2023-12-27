@@ -1,3 +1,6 @@
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import tag.MathTag;
 import tag.TwoPointers;
 
@@ -37,9 +40,8 @@ public class _202_HappyNumber extends BaseSolution {
 
     @Override
     void solution() {
-
-        assert isHappy(19) == true;
-        assert isHappy(2) == false;
+        assertTrue(isHappy(19));
+        assertFalse(isHappy(2));
     }
 
     public boolean isHappy(int n) {

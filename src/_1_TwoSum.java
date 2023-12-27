@@ -1,6 +1,8 @@
 import java.util.Arrays;
 import java.util.HashMap;
 
+import org.junit.Assert;
+
 import tag.Array;
 import tag.HashTable;
 
@@ -35,6 +37,7 @@ public class _1_TwoSum extends BaseSolution {
         int target = 9;
         int[] res = twoSum(nums, target);
 
+        Assert.assertArrayEquals(new int[] { 0, 1 }, res);
         println(Arrays.toString(res));
     }
 

@@ -1,3 +1,6 @@
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -78,11 +81,13 @@ public class _139_WordBreak extends BaseSolution {
         List<String> wordDict = Arrays.asList("apple", "pen");
         boolean res = wordBreak(s, wordDict);
         println("res:" + res);
+        assertTrue(res);
 
         String s1 = "catsandog";
         List<String> wordDict1 = Arrays.asList("cats", "dog", "sand", "and", "cat");
         boolean res1 = wordBreak(s1, wordDict1);
         println("res:" + res1);
+        assertFalse(res1);
     }
 
     /**

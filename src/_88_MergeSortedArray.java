@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertArrayEquals;
+
 import java.util.Arrays;
 
 import tag.Array;
@@ -70,6 +72,8 @@ public class _88_MergeSortedArray extends BaseSolution {
         int n = 3;
         merge(nums1, m, nums2, n);
 
+        int[] expect = new int[]{1,2,2,3,5,6};
+        assertArrayEquals(expect, nums1);
         println(" res:" + Arrays.toString(nums1));
 
     }

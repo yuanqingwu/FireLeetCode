@@ -1,3 +1,6 @@
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import tag.Array;
 import tag.Greedy;
 
@@ -30,10 +33,10 @@ public class _55_JumpGame extends BaseSolution {
     @Override
     void solution() {
         boolean res = canJump(new int[] { 2, 3, 1, 1, 4 });
-        assert (res == true);
+        assertTrue(res == true);
 
         boolean res1 = canJump(new int[] { 3, 2, 1, 0, 4 });
-        assert (res1 == false);
+        assertFalse(res1 == false);
 
     }
 

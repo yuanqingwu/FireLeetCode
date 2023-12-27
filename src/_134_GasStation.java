@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import tag.Array;
 import tag.Greedy;
 
@@ -50,7 +52,7 @@ public class _134_GasStation extends BaseSolution {
         int[] gas = new int[] { 1, 2, 3, 4, 5 };
         int[] cost = new int[] { 3, 4, 5, 1, 2 };
         int index = canCompleteCircuit(gas, cost);
-        assert index == 3;
+        assertEquals(3, index);
     }
 
     // 亏空最严重的一个点必须放在最后一步走，等着前面剩余的救助
