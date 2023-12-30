@@ -2,6 +2,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import tag.Array;
+import tag.DynamicProgramming;
 import tag.Greedy;
 
 /**
@@ -22,6 +23,7 @@ import tag.Greedy;
  * Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
  */
 @Greedy
+@DynamicProgramming
 @Array
 public class _55_JumpGame extends BaseSolution {
 
@@ -33,13 +35,17 @@ public class _55_JumpGame extends BaseSolution {
     @Override
     void solution() {
         boolean res = canJump(new int[] { 2, 3, 1, 1, 4 });
-        assertTrue(res == true);
+        assertTrue(res);
 
         boolean res1 = canJump(new int[] { 3, 2, 1, 0, 4 });
-        assertFalse(res1 == false);
+        assertFalse(res1);
 
     }
 
+    /**
+     * time complexity:O(n)
+     */
+    @Greedy(timeComplexity = "O(n)")
     public boolean canJump(int[] nums) {
         int maxPos = 0;
         for (int i = 0; i < nums.length && i <= maxPos; i++) {
@@ -49,5 +55,27 @@ public class _55_JumpGame extends BaseSolution {
             }
         }
         return false;
+    }
+
+    /**
+     * time complexity:O(n^2)
+     */
+    @DynamicProgramming(timeComplexity = "O(n^2)")
+    public boolean canJump1(int[] nums) {
+        int len = nums.length;
+        boolean[] dp = new boolean[len];
+        dp[0] = true;
+
+        for (int i = 1; i < len; i++) {
+            dp[i] = false;
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && nums[j] + j >= i) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+
+        return dp[len - 1];
     }
 }
