@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import tag.HashTable;
 import tag.SlidingWindow;
-import tag.Strings;
+import tag.StringTag;
 
 /*
  * Given a string, find the length of the longest substring without repeating characters.
@@ -22,7 +22,7 @@ import tag.Strings;
  * 
  */
 @HashTable
-@Strings
+@StringTag
 @SlidingWindow
 public class _3_LongestSubString extends BaseSolution {
 

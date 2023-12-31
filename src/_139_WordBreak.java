@@ -14,7 +14,7 @@ import tag.DFS_DepthFirstSearch;
 import tag.DynamicProgramming;
 import tag.HashTable;
 import tag.Memoization;
-import tag.Strings;
+import tag.StringTag;
 import tag.Trie;
 
 /**
@@ -60,7 +60,7 @@ import tag.Trie;
  * 
  */
 @DynamicProgramming
-@Strings
+@StringTag
 @HashTable
 @Array
 @Memoization
