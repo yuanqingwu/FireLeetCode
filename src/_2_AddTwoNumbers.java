@@ -12,12 +12,28 @@ import tag.Recursion;
  * You may assume the two numbers do not contain any leading zero, except the
  * number 0 itself.
  *
+ * <p>
+ * 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
+ * 
+ * 请你将两个数相加，并以相同形式返回一个表示和的链表。
+ * 
+ * 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
+ * <p>
+ * 
  * Example:
  * Input: l1 = [2,4,3], l2 = [5,6,4]
  * Output: [7,0,8]
  * Explanation: 342 + 465 = 807.
  * 
+ * <p>
  * 
+ * Constraints:
+ * 
+ * The number of nodes in each linked list is in the range [1, 100].
+ * 0 <= Node.val <= 9
+ * It is guaranteed that the list represents a number that does not have leading
+ * zeros.
+ * <p>
  * 将两个链表看成是相同长度的进行遍历，如果一个链表较短则在前面补 00，比如 987 + 23 = 987 + 023 = 1010
  * 每一位计算的同时需要考虑上一位的进位问题，而当前位计算结束后同样需要更新进位值
  * 如果两个链表全部遍历完毕后，进位值为 1，则在新链表最前方添加节点 1
@@ -77,6 +93,7 @@ public class _2_AddTwoNumbers extends BaseSolution {
     /**
      * recursion solution
      */
+    @Recursion
     public ListNode addTwoNumbersRecursion(ListNode l1, ListNode l2) {
         return addTwo(l1, l2, 0);
     }
