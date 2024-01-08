@@ -61,9 +61,9 @@ public class _198_HouseRobber extends BaseSolution {
     void solution() {
 
         int[] test1 = new int[] { 2, 7, 9, 3, 1 };
-        int res = rob(test1);
+        int res = rob_dp(test1);
         println("res:" + res);
-        assertEquals(11, res);
+        assertEquals(12, res);
 
     }
 
@@ -101,17 +101,17 @@ public class _198_HouseRobber extends BaseSolution {
         }
         // 子问题：
         // f(k) = 偷 [0..k) 房间中的最大金额
-    
+
         // f(0) = 0
         // f(1) = nums[0]
         // f(k) = max{ rob(k-1), nums[k-1] + rob(k-2) }
-    
+
         int N = nums.length;
-        int[] dp = new int[N+1];
+        int[] dp = new int[N + 1];
         dp[0] = 0;
         dp[1] = nums[0];
         for (int k = 2; k <= N; k++) {
-            dp[k] = Math.max(dp[k-1], nums[k-1] + dp[k-2]);
+            dp[k] = Math.max(dp[k - 1], nums[k - 1] + dp[k - 2]);
         }
         return dp[N];
     }
