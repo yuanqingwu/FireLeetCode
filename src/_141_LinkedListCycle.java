@@ -54,13 +54,14 @@ public class _141_LinkedListCycle extends BaseSolution {
 
     @Override
     void solution() {
-        ListNode list1 = ListNode.gen(1,new int[]{3,2,0,-4});
+        ListNode list1 = ListNode.gen(1, new int[] { 3, 2, 0, -4 });
         println(ListNode.toString(list1));
         assertEquals(true, hasCycle(list1));
     }
 
+    @TwoPointers(timeComplexity = "O(n)", spaceComplexity = "O(1)")
     public boolean hasCycle(ListNode head) {
-        if (head == null) {
+        if (head == null || head.next == null) {
             return false;
         }
         ListNode fast = head.next;
