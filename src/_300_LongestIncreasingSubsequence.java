@@ -68,17 +68,17 @@ public class _300_LongestIncreasingSubsequence extends BaseSolution {
                 int m = (i + j) / 2;
                 if (tails[m] < num) {
                     i = m + 1;
-                }else {
+                } else {
                     j = m;
-                }  
+                }
             }
-            println("i = "+i +"  j= "+j + "  res= "+res + " num= "+num+" array:"+Arrays.toString(tails));
+            println("i = " + i + "  j= " + j + "  res= " + res + " num= " + num + " array:" + Arrays.toString(tails));
             // 如果没有到达j==res这个条件 就说明tail数组里只有部分比这个num要小 那么就把num插入到tail数组合适的位置即可
             // 但是由于这样的子序列长度肯定是没有res长的 因此res不需要更新
             // 注意：tail数组并没有显式表示出具体序列的模样，只记录了每种长度序列中结尾元素最小的那个序列的结尾元素，tails一定是递增的
             tails[i] = num;
             // j==res 说明目前tail数组的元素都比当前的num要小 因此最长子序列的长度可以增加了
-            if (j == res){
+            if (j == res) {
                 res++;
             }
         }
@@ -101,5 +101,29 @@ public class _300_LongestIncreasingSubsequence extends BaseSolution {
         }
         return maxValue;
 
+    }
+
+    @DynamicProgramming(timeComplexity = "O(N^2)", spaceComplexity = "O(N)")
+    public int lengthOfLIS2(int[] nums) {
+        int len = nums.length;
+        int[] dp = new int[len];
+        dp[0] = nums[0];
+        int res = 1;
+        for (int i = 1; i < len; i++) {
+            if (nums[i] <= dp[res - 1]) {
+                // 当下一个数小于等于当前数组最大数的时候，需要遍历当前数组，将此值按照递增的顺序放入合适的位置。此时只是优化了当前数组，有效长度值保持不变。
+                for (int j = 0; j < res; j++) {
+                    if (dp[j] >= nums[i]) {
+                        dp[j] = nums[i];
+                        break;
+                    }
+                }
+            } else {
+                // 当下一个数大于当前数组最大数的时候，直接加到数组后面，同时有效长度值加1.
+                dp[res] = nums[i];
+                res++;
+            }
+        }
+        return res;
     }
 }

@@ -90,6 +90,21 @@ public class _2140_SolvingQuestionsWithBrainpower extends BaseSolution {
         assertEquals(100, res2);
     }
 
+    /**
+     * 填表法适用于大多数 DP：通过当前状态所依赖的状态，来计算当前状态。
+     * 
+     * 设有 n 个问题，定义 dp[i] 表示解决区间 [i,n−1] 内的问题可以获得的最高分数。
+     * 倒序遍历问题列表，对于第 i 个问题，我们有两种决策：跳过或解决。
+     * 
+     * 若跳过，则有 dp[i]=dp[i+1]。
+     * 
+     * 若解决，则需要跳过后续 brainpower[i] 个问题。
+     * 记 j=i+brainpower[i]+1 ，则有:
+     * j < n: dp[i]=points[i]+dp[j]
+     * j >= n: dp[i]=points[i]
+     * 
+     * 取两种情况最大值，最后答案为dp[0]。
+     */
     @DynamicProgramming(timeComplexity = "O(n)", spaceComplexity = "O(n)")
     public long mostPoints(int[][] questions) {
 
