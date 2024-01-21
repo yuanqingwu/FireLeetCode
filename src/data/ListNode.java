@@ -6,6 +6,17 @@ public class ListNode {
 
     public ListNode(int x) {
         val = x;
+        next = null;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof ListNode ? val == ((ListNode) obj).val : false;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(val);
     }
 
     /**
