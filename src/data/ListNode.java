@@ -86,7 +86,10 @@ public class ListNode {
         StringBuilder builder = new StringBuilder();
         int limit = 0;
         do {
-            builder.append(listNode.val + ",");
+            builder.append(listNode.val);
+            if (listNode != null && listNode.next != null) {
+                builder.append(",");
+            }
             listNode = listNode.next;
             limit++;
         } while (listNode != null && limit < 100);
