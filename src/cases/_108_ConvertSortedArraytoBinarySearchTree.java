@@ -4,7 +4,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 import java.util.Arrays;
 
-import data.TreeNode;
+import basic.tree.TreeNode;
 import tag.DFS_DepthFirstSearch;
 
 /**

@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import data.ListNode;
+import basic.linklist.ListNode;
 import tag.LinkedListTag;
 import tag.TwoPointers;
 

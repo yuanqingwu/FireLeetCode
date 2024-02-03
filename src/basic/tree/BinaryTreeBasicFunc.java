@@ -1,14 +1,13 @@
-package basicfun;
+package basic.tree;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import data.TreeNode;
 import tag.BFS_BreadthFirstSearch;
 import tag.DFS_DepthFirstSearch;
 import tag.Recursion;
 
-public class BinaryTreeBasic {
+public class BinaryTreeBasicFunc {
 
     /**
      * Invert a binary tree.

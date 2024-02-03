@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertTrue;
 
-import data.TreeNode;
+import basic.tree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
 import tag.DFS_DepthFirstSearch;
 import tag.Recursion;

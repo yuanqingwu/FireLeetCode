@@ -1,6 +1,5 @@
-package basicfun;
+package basic.linklist;
 
-import data.ListNode;
 import tag.Recursion;
 import tag.TwoPointers;
 

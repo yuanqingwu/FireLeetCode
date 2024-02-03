@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import data.TreeNode;
+import basic.tree.TreeNode;
 import tag.BinaryTree;
 import tag.DFS_DepthFirstSearch;
 import tag.Tree;

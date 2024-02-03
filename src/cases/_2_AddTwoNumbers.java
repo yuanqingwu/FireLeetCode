@@ -1,6 +1,6 @@
 package cases;
 
-import data.ListNode;
+import basic.linklist.ListNode;
 import tag.LinkedListTag;
 import tag.MathTag;
 import tag.Recursion;

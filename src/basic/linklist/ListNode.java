@@ -1,4 +1,4 @@
-package data;
+package basic.linklist;
 
 public class ListNode {
     public int val;

@@ -1,6 +1,6 @@
 package cases;
 
-import data.TreeNode;
+import basic.tree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
 import tag.BinaryTree;
 import tag.DFS_DepthFirstSearch;
