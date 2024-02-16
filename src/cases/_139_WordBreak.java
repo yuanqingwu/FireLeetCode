@@ -17,7 +17,7 @@ import tag.DynamicProgramming;
 import tag.HashTable;
 import tag.Memoization;
 import tag.StringTag;
-import tag.Trie;
+import tag.TrieTag;
 
 /**
  * Given a string s and a dictionary of strings wordDict, return true if s can
@@ -73,7 +73,7 @@ import tag.Trie;
 @HashTable
 @Array
 @Memoization
-@Trie
+@TrieTag
 @DFS_DepthFirstSearch
 @BFS_BreadthFirstSearch
 public class _139_WordBreak extends BaseSolution {
