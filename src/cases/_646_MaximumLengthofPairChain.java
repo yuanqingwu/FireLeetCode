@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.DynamicProgramming;
 import tag.Greedy;
 import tag.Sorting;
@@ -55,7 +55,7 @@ import tag.Sorting;
  */
 @Greedy
 @DynamicProgramming
-@Array
+@ArrayTag
 @Sorting
 public class _646_MaximumLengthofPairChain extends BaseSolution {
 

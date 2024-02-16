@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.DynamicProgramming;
 
 /**
@@ -51,7 +51,7 @@ import tag.DynamicProgramming;
  * - 确定 DP 数组的计算顺序
  * - 空间优化（可选）
  */
-@Array
+@ArrayTag
 @DynamicProgramming
 public class _198_HouseRobber extends BaseSolution {
 

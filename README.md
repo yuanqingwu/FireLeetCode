@@ -13,7 +13,7 @@ git clone git@github.com:yuanqingwu/FireLeetCode.git
 
 #### 2. 导入编辑器
 
-推荐使用vscode或者其他常见java编辑器。
+推荐使用 vscode 或者 idea 等其他常见java编辑器。
 
 #### 3. 开启leetcode之旅
 
@@ -27,19 +27,43 @@ git clone git@github.com:yuanqingwu/FireLeetCode.git
    
 
 ## 项目介绍
+项目基础结构如下：
+
+```
+FireLeetcode
+├──lib                    #依赖库（junit用于结果校验）
+└──src 
+   ├──basic               #基础数据结构与对应基础函数整理
+   │  ├──graph            #图
+   │  │  ├──Edge.java     #边的代码表述
+   │  │  ├──Graph.java    #图的代码表述以及基础函数
+   │  │  ├──Node.java     #点的代码表述
+   │  │  └──ReadMe.txt    #图的核心知识点整理
+   │  ├──linklist         #链表
+   │  └──tree             #树
+   │     ├──binarytree    #二叉树
+   │     └──trie          #字典树/前缀树
+   ├──cases               #leetcode 典型题整理
+   │  ├──_1_TwoSum.java
+   │  └──......
+   └──tag                 #标签（注释），便于检索归类
+      ├──DynamicProgramming.java
+      ├──Greedy.java
+      └──......
+```
 
 ### 数据结构
 
-在``src/data``目录中已经封装好常见的数据结构，后续解题过程中可以直接引用。
+在``src/basic``目录中已经封装好常见的数据结构，后续解题过程中可以直接引用。
 
 ### 问题类别
 
-在``src/tag``目录中通过java 注解的方式罗列了常见的题目类别以及解题思路。
+在``src/tag``目录中通过 java 注解的方式罗列了常见的题目类别以及解题思路。
 - 在问题类上可以通过注解标明此问题所属类别。
 - 在对应问题的解法函数上可以通过注解标明不同解法的时间复杂度与空间复杂度。如此，不同解法的优劣可以一目了然。
 
 如**动态规划**类型注解：
-定义：
+- 定义：
 
 ```
 package tag;
@@ -52,7 +76,7 @@ public @interface DynamicProgramming {
 }
 ```
 
-使用方式：
+- 使用方式：
 ```
     @DynamicProgramming(timeComplexity = "O(N^2)", spaceComplexity = "O(N^2)")
     public String longestPalindrome(String s) {
@@ -60,10 +84,10 @@ public @interface DynamicProgramming {
     }
 ```
 
+### leetcode典型题
+在``src/cases``目录中整理了leetcode 题库中的典型题与最优题解，方便学习与调试。类命名规范：``_题目编号_题目描述.java``
+
+注意：BaseSolution中进行了基础的封装，所有题解类继承BaseSolution类。
+
 ### 测试验证
-本项目采用Junit进行答案验证。
-
-### 项目基础结构
-BaseSolution中进行了基础的封装，所有题解类继承BaseSolution类。
-
-类命名规范：``_题目编号_题目描述.java``
+采用Junit框架进行结果验证。

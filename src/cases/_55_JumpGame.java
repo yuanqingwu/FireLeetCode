@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.DynamicProgramming;
 import tag.Greedy;
 
@@ -33,7 +33,7 @@ import tag.Greedy;
  */
 @Greedy
 @DynamicProgramming
-@Array
+@ArrayTag
 public class _55_JumpGame extends BaseSolution {
 
     public static void main(String[] args) {

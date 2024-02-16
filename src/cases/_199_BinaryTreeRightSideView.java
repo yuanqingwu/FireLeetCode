@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import basic.tree.TreeNode;
+import basic.tree.binarytree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
 import tag.BinaryTree;
 import tag.DFS_DepthFirstSearch;

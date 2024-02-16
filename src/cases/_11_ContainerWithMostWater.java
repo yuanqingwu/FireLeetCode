@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.Greedy;
 import tag.TwoPointers;
 
@@ -50,7 +50,7 @@ import tag.TwoPointers;
  */
 @Greedy
 @TwoPointers
-@Array
+@ArrayTag
 public class _11_ContainerWithMostWater extends BaseSolution {
 
     public static void main(String[] args) {

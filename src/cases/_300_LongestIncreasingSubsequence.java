@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.BinarySearch;
 import tag.DynamicProgramming;
 import tag.Greedy;
@@ -38,7 +38,7 @@ import tag.Greedy;
  * 1 <= nums.length <= 2500
  * -104 <= nums[i] <= 104
  */
-@Array
+@ArrayTag
 @DynamicProgramming
 @BinarySearch
 public class _300_LongestIncreasingSubsequence extends BaseSolution {

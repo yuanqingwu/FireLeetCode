@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 import org.junit.Assert;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.HashTable;
 
 /**
@@ -51,7 +51,7 @@ import tag.HashTable;
  * Only one valid answer exists.
  * 
  */
-@Array
+@ArrayTag
 @HashTable
 public class _1_TwoSum extends BaseSolution {
 

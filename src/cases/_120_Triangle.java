@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.DynamicProgramming;
 
 /**
@@ -51,7 +51,7 @@ import tag.DynamicProgramming;
  * -104 <= triangle[i][j] <= 104
  */
 @DynamicProgramming
-@Array
+@ArrayTag
 public class _120_Triangle extends BaseSolution {
 
     public static void main(String[] args) {

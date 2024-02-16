@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.junit.Assert;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.Sorting;
 import tag.StringTag;
 
@@ -51,7 +51,7 @@ import tag.StringTag;
  * 0 <= strs[i].length <= 100
  * strs[i] consists of lowercase English letters.
  */
-@Array
+@ArrayTag
 @StringTag
 @Sorting
 public class _49_GroupAnagrams extends BaseSolution {

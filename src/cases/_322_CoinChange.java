@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.Array;
+import tag.ArrayTag;
 import tag.DynamicProgramming;
 
 /**
@@ -44,7 +44,7 @@ import tag.DynamicProgramming;
  * 0 <= amount <= 104
  */
 @DynamicProgramming
-@Array
+@ArrayTag
 public class _322_CoinChange extends BaseSolution {
 
     public static void main(String[] args) {
