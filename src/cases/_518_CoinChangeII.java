@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.DynamicProgramming;
 
 /**
@@ -55,7 +55,7 @@ import tag.DynamicProgramming;
  * All the values of coins are unique.
  * 0 <= amount <= 5000
  */
-@ArrayTag
+@Tag_Array
 @DynamicProgramming
 public class _518_CoinChangeII extends BaseSolution {
 

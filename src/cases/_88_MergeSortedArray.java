@@ -4,7 +4,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 import java.util.Arrays;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.Sorting;
 import tag.TwoPointers;
 
@@ -67,7 +67,7 @@ import tag.TwoPointers;
  * 解题思路：逆向双指针
  */
 @TwoPointers
-@ArrayTag
+@Tag_Array
 @Sorting
 public class _88_MergeSortedArray extends BaseSolution {
 

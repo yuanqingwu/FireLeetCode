@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import basic.tree.binarytree.TreeNode;
 import tag.BinaryTree;
 import tag.DFS_DepthFirstSearch;
-import tag.Tree;
+import tag.Tag_Tree;
 
 /**
  * Given the root of a binary tree, flatten the tree into a "linked list":
@@ -43,7 +43,7 @@ import tag.Tree;
  * -100 <= Node.val <= 100
  * 
  */
-@Tree
+@Tag_Tree
 @BinaryTree
 @DFS_DepthFirstSearch
 public class _114_FlattenBinaryTreetoLinkedList extends BaseSolution {

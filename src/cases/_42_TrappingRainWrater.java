@@ -2,7 +2,7 @@ package cases;
 
 import org.junit.Assert;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.DynamicProgramming;
 import tag.TwoPointers;
 
@@ -33,7 +33,7 @@ import tag.TwoPointers;
  * 1 <= n <= 2 * 104
  * 0 <= height[i] <= 105
  */
-@ArrayTag
+@Tag_Array
 @TwoPointers
 @DynamicProgramming
 public class _42_TrappingRainWrater extends BaseSolution {

@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertEquals;
 
 import tag.DynamicProgramming;
-import tag.StringTag;
+import tag.Tag_String;
 
 /**
  * Given two strings text1 and text2, return the length of their longest common
@@ -51,7 +51,7 @@ import tag.StringTag;
  * 
  */
 @DynamicProgramming
-@StringTag
+@Tag_String
 public class _1143_LongestCommonSubsequence extends BaseSolution {
 
     public static void main(String[] args) {

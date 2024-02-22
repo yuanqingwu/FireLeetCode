@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import basic.tree.binarytree.TreeNode;
 import tag.DFS_DepthFirstSearch;
 import tag.Recursion;
-import tag.Tree;
+import tag.Tag_Tree;
 
 /**
  * Given the root of a binary tree, return the length of the diameter of the
@@ -40,7 +40,7 @@ import tag.Tree;
  * The number of nodes in the tree is in the range [1, 104].
  * -100 <= Node.val <= 100
  */
-@Tree
+@Tag_Tree
 @DFS_DepthFirstSearch
 @Recursion
 public class _543_DiameterofBinaryTree extends BaseSolution {

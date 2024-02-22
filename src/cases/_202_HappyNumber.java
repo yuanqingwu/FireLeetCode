@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import tag.MathTag;
+import tag.Tag_Math;
 import tag.TwoPointers;
 
 /**
@@ -41,7 +41,7 @@ import tag.TwoPointers;
  * 1 <= n <= 231 - 1
  */
 @TwoPointers
-@MathTag
+@Tag_Math
 public class _202_HappyNumber extends BaseSolution {
 
     public static void main(String[] args) {

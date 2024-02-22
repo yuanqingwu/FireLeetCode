@@ -11,7 +11,7 @@ import basic.tree.binarytree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
 import tag.BinaryTree;
 import tag.DFS_DepthFirstSearch;
-import tag.Tree;
+import tag.Tag_Tree;
 
 /**
  * Given the root of a binary tree, imagine yourself standing on the right side
@@ -39,7 +39,7 @@ import tag.Tree;
  * The number of nodes in the tree is in the range [0, 100].
  * -100 <= Node.val <= 100
  */
-@Tree
+@Tag_Tree
 @BinaryTree
 @BFS_BreadthFirstSearch
 @DFS_DepthFirstSearch

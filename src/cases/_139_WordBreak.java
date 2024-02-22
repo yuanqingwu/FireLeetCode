@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.BFS_BreadthFirstSearch;
 import tag.DFS_DepthFirstSearch;
 import tag.DynamicProgramming;
-import tag.HashTable;
+import tag.Tag_HashTable;
 import tag.Memoization;
-import tag.StringTag;
+import tag.Tag_String;
 import tag.TrieTag;
 
 /**
@@ -69,9 +69,9 @@ import tag.TrieTag;
  * 
  */
 @DynamicProgramming
-@StringTag
-@HashTable
-@ArrayTag
+@Tag_String
+@Tag_HashTable
+@Tag_Array
 @Memoization
 @TrieTag
 @DFS_DepthFirstSearch

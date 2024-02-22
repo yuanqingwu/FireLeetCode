@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.TwoPointers;
 
 /**
@@ -61,7 +61,7 @@ import tag.TwoPointers;
  * 
  */
 @TwoPointers
-@ArrayTag
+@Tag_Array
 public class _26_80_RemoveDuplicates extends BaseSolution {
 
     public static void main(String[] args) {

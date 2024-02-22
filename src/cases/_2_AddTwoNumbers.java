@@ -1,8 +1,8 @@
 package cases;
 
 import basic.linklist.ListNode;
-import tag.LinkedListTag;
-import tag.MathTag;
+import tag.Tag_LinkedList;
+import tag.Tag_Math;
 import tag.Recursion;
 
 /**
@@ -43,8 +43,8 @@ import tag.Recursion;
  * 小技巧：对于链表问题，返回结果为头结点时，通常需要先初始化一个预先指针 pre，该指针的下一个节点指向真正的头结点head。
  * 使用预先指针的目的在于链表初始化时无可用节点值，而且链表构造过程需要指针移动，进而会导致头指针丢失，无法返回结果。
  */
-@LinkedListTag
-@MathTag
+@Tag_LinkedList
+@Tag_Math
 @Recursion
 public class _2_AddTwoNumbers extends BaseSolution {
 

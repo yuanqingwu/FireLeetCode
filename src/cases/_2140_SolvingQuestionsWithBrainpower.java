@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.DynamicProgramming;
 
 /**
@@ -71,7 +71,7 @@ import tag.DynamicProgramming;
  * 1 <= pointsi, brainpoweri <= 105
  * 
  */
-@ArrayTag
+@Tag_Array
 @DynamicProgramming
 public class _2140_SolvingQuestionsWithBrainpower extends BaseSolution {
 

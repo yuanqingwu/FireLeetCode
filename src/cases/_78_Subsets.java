@@ -7,7 +7,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.BackTracking;
 
 /**
@@ -42,7 +42,7 @@ import tag.BackTracking;
  * All the numbers of nums are unique.
  */
 @BackTracking
-@ArrayTag
+@Tag_Array
 public class _78_Subsets extends BaseSolution {
 
     public static void main(String[] args) {

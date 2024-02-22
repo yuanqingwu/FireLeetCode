@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertEquals;
 
 import basic.linklist.ListNode;
-import tag.LinkedListTag;
+import tag.Tag_LinkedList;
 import tag.TwoPointers;
 
 /**
@@ -45,7 +45,7 @@ import tag.TwoPointers;
  * -105 <= Node.val <= 105
  * pos is -1 or a valid index in the linked-list.
  */
-@LinkedListTag
+@Tag_LinkedList
 @TwoPointers
 public class _141_LinkedListCycle extends BaseSolution {
 

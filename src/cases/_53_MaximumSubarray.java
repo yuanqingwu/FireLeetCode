@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.DynamicProgramming;
 
 /**
@@ -46,7 +46,7 @@ import tag.DynamicProgramming;
  * -104 <= nums[i] <= 104
  */
 @DynamicProgramming
-@ArrayTag
+@Tag_Array
 public class _53_MaximumSubarray extends BaseSolution {
 
     public static void main(String[] args) {

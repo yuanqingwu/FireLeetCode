@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.DynamicProgramming;
 
 /**
@@ -31,7 +31,7 @@ import tag.DynamicProgramming;
  * 1 <= m, n <= 200
  * 0 <= grid[i][j] <= 200
  */
-@ArrayTag
+@Tag_Array
 @DynamicProgramming
 public class _64_MinimumPathSum extends BaseSolution {
 

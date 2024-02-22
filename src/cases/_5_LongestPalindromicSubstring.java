@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertEquals;
 
 import tag.DynamicProgramming;
-import tag.StringTag;
+import tag.Tag_String;
 
 /**
  * 5. 最长回文子串
@@ -29,7 +29,7 @@ import tag.StringTag;
  * 1 <= s.length <= 1000
  * s consist of only digits and English letters.
  */
-@StringTag
+@Tag_String
 @DynamicProgramming
 public class _5_LongestPalindromicSubstring extends BaseSolution {
 

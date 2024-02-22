@@ -5,8 +5,8 @@ import java.util.HashMap;
 
 import org.junit.Assert;
 
-import tag.ArrayTag;
-import tag.HashTable;
+import tag.Tag_Array;
+import tag.Tag_HashTable;
 
 /**
  * 1. 两数之和
@@ -51,8 +51,8 @@ import tag.HashTable;
  * Only one valid answer exists.
  * 
  */
-@ArrayTag
-@HashTable
+@Tag_Array
+@Tag_HashTable
 public class _1_TwoSum extends BaseSolution {
 
     public static void main(String[] args) {

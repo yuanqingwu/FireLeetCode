@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tag.BackTracking;
-import tag.StringTag;
+import tag.Tag_String;
 
 /**
  * [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/)
@@ -48,7 +48,7 @@ import tag.StringTag;
  * 0 <= digits.length <= 4
  * digits[i] is a digit in the range ['2', '9'].
  */
-@StringTag
+@Tag_String
 @BackTracking
 public class _17_LetterCombinationsOfAPhoneNumber extends BaseSolution {
 

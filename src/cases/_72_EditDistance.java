@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 
 import tag.DynamicProgramming;
-import tag.StringTag;
+import tag.Tag_String;
 
 /**
  * 72. 编辑距离
@@ -59,7 +59,7 @@ import tag.StringTag;
  * word1 and word2 consist of lowercase English letters.
  */
 @DynamicProgramming
-@StringTag
+@Tag_String
 public class _72_EditDistance extends BaseSolution {
 
     public static void main(String[] args) {

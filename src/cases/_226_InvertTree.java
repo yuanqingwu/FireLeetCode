@@ -5,7 +5,7 @@ import tag.BFS_BreadthFirstSearch;
 import tag.BinaryTree;
 import tag.DFS_DepthFirstSearch;
 import tag.Recursion;
-import tag.Tree;
+import tag.Tag_Tree;
 
 /**
  * Given the root of a binary tree, invert the tree, and return its root.
@@ -21,7 +21,7 @@ import tag.Tree;
  * 
  * 解题思路：递归交换左右子树。
  */
-@Tree
+@Tag_Tree
 @DFS_DepthFirstSearch
 @BFS_BreadthFirstSearch
 @BinaryTree

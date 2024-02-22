@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertEquals;
 
 import basic.linklist.ListNode;
-import tag.LinkedListTag;
+import tag.Tag_LinkedList;
 import tag.Recursion;
 import tag.TwoPointers;
 
@@ -35,7 +35,7 @@ import tag.TwoPointers;
  * -5000 <= Node.val <= 5000
  * 
  */
-@LinkedListTag
+@Tag_LinkedList
 @Recursion
 public class _206_ReverseLinkedList extends BaseSolution {
 

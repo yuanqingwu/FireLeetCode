@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertEquals;
 
 import tag.DynamicProgramming;
-import tag.MathTag;
+import tag.Tag_Math;
 import tag.Memoization;
 
 /**
@@ -51,7 +51,7 @@ import tag.Memoization;
  */
 @DynamicProgramming
 @Memoization
-@MathTag
+@Tag_Math
 public class _70_ClimbingStairs extends BaseSolution {
 
     public static void main(String[] args) {

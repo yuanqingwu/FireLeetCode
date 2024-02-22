@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.Greedy;
 
 /**
@@ -47,7 +47,7 @@ import tag.Greedy;
  * 0 <= gas[i], cost[i] <= 104
  */
 @Greedy
-@ArrayTag
+@Tag_Array
 public class _134_GasStation extends BaseSolution {
 
     public static void main(String[] args) {

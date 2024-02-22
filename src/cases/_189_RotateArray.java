@@ -2,8 +2,8 @@ package cases;
 
 import static org.junit.Assert.assertArrayEquals;
 
-import tag.ArrayTag;
-import tag.MathTag;
+import tag.Tag_Array;
+import tag.Tag_Math;
 import tag.TwoPointers;
 
 /**
@@ -40,8 +40,8 @@ import tag.TwoPointers;
  * -231 <= nums[i] <= 231 - 1
  * 0 <= k <= 105
  */
-@ArrayTag
-@MathTag
+@Tag_Array
+@Tag_Math
 @TwoPointers
 public class _189_RotateArray extends BaseSolution {
 

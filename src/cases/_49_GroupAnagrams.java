@@ -8,9 +8,9 @@ import java.util.Map;
 
 import org.junit.Assert;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.Sorting;
-import tag.StringTag;
+import tag.Tag_String;
 
 /**
  * Given an array of strings strs, group the anagrams together. You can return
@@ -51,8 +51,8 @@ import tag.StringTag;
  * 0 <= strs[i].length <= 100
  * strs[i] consists of lowercase English letters.
  */
-@ArrayTag
-@StringTag
+@Tag_Array
+@Tag_String
 @Sorting
 public class _49_GroupAnagrams extends BaseSolution {
 

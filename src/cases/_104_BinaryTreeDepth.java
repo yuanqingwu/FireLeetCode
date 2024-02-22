@@ -8,7 +8,7 @@ import java.util.List;
 import basic.tree.binarytree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
 import tag.DFS_DepthFirstSearch;
-import tag.Tree;
+import tag.Tag_Tree;
 
 /**
  * Given the root of a binary tree, return its maximum depth.
@@ -26,7 +26,7 @@ import tag.Tree;
  * <p>
  * 解题思路：递归，DFS
  */
-@Tree
+@Tag_Tree
 @BFS_BreadthFirstSearch
 @DFS_DepthFirstSearch
 public class _104_BinaryTreeDepth extends BaseSolution {

@@ -6,7 +6,7 @@ import basic.tree.binarytree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
 import tag.DFS_DepthFirstSearch;
 import tag.Recursion;
-import tag.Tree;
+import tag.Tag_Tree;
 
 /**
  * Given the root of a binary tree, check whether it is a mirror of itself
@@ -24,7 +24,7 @@ import tag.Tree;
  * -100 <= Node.val <= 100
  */
 @Recursion
-@Tree
+@Tag_Tree
 @DFS_DepthFirstSearch
 @BFS_BreadthFirstSearch
 public class _101_SymmetricTree extends BaseSolution {

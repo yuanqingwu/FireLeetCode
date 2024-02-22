@@ -2,7 +2,7 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
+import tag.Tag_Array;
 import tag.DFS_DepthFirstSearch;
 
 /**
@@ -46,7 +46,7 @@ import tag.DFS_DepthFirstSearch;
  * grid[i][j] is '0' or '1'.
  */
 @DFS_DepthFirstSearch
-@ArrayTag
+@Tag_Array
 public class _200_NumberOfIslands extends BaseSolution {
 
     public static void main(String[] args) {

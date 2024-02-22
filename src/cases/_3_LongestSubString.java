@@ -4,9 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 
-import tag.HashTable;
+import tag.Tag_HashTable;
 import tag.SlidingWindow;
-import tag.StringTag;
+import tag.Tag_String;
 
 /**
  * 3. 无重复字符的最长子串
@@ -41,8 +41,8 @@ import tag.StringTag;
  * - s consists of English letters, digits, symbols and spaces.
  * 
  */
-@HashTable
-@StringTag
+@Tag_HashTable
+@Tag_String
 @SlidingWindow
 public class _3_LongestSubString extends BaseSolution {
 
