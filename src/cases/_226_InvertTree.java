@@ -2,7 +2,7 @@ package cases;
 
 import basic.tree.binarytree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
-import tag.BinaryTree;
+import tag.Tag_BinaryTree;
 import tag.DFS_DepthFirstSearch;
 import tag.Recursion;
 import tag.Tag_Tree;
@@ -24,7 +24,7 @@ import tag.Tag_Tree;
 @Tag_Tree
 @DFS_DepthFirstSearch
 @BFS_BreadthFirstSearch
-@BinaryTree
+@Tag_BinaryTree
 @Recursion
 public class _226_InvertTree extends BaseSolution {
 

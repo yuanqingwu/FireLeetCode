@@ -9,7 +9,7 @@ import java.util.Queue;
 
 import basic.tree.binarytree.TreeNode;
 import tag.BFS_BreadthFirstSearch;
-import tag.BinaryTree;
+import tag.Tag_BinaryTree;
 import tag.DFS_DepthFirstSearch;
 import tag.Tag_Tree;
 
@@ -40,7 +40,7 @@ import tag.Tag_Tree;
  * -100 <= Node.val <= 100
  */
 @Tag_Tree
-@BinaryTree
+@Tag_BinaryTree
 @BFS_BreadthFirstSearch
 @DFS_DepthFirstSearch
 public class _199_BinaryTreeRightSideView extends BaseSolution {

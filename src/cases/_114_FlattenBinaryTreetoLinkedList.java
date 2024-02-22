@@ -3,7 +3,7 @@ package cases;
 import static org.junit.Assert.assertEquals;
 
 import basic.tree.binarytree.TreeNode;
-import tag.BinaryTree;
+import tag.Tag_BinaryTree;
 import tag.DFS_DepthFirstSearch;
 import tag.Tag_Tree;
 
@@ -44,7 +44,7 @@ import tag.Tag_Tree;
  * 
  */
 @Tag_Tree
-@BinaryTree
+@Tag_BinaryTree
 @DFS_DepthFirstSearch
 public class _114_FlattenBinaryTreetoLinkedList extends BaseSolution {
 
