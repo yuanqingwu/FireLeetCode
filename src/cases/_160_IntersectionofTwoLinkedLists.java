@@ -3,9 +3,11 @@ package cases;
 import static org.junit.Assert.assertEquals;
 
 import basic.linklist.ListNode;
+import tag.Tag_LinkedList;
 import tag.TwoPointers;
 
 /**
+ * [160 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists)
  * Given the heads of two singly linked-lists headA and headB, return the node
  * at which the two lists intersect. If the two linked lists have no
  * intersection at all, return null.
@@ -29,6 +31,8 @@ import tag.TwoPointers;
  * 
  * 
  */
+@Tag_LinkedList
+@TwoPointers
 public class _160_IntersectionofTwoLinkedLists extends BaseSolution {
 
     public static void main(String[] args) {

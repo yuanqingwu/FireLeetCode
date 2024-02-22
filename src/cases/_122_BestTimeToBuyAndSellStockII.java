@@ -2,9 +2,9 @@ package cases;
 
 import static org.junit.Assert.assertEquals;
 
-import tag.ArrayTag;
 import tag.DynamicProgramming;
 import tag.Greedy;
+import tag.Tag_Array;
 
 /**
  * [122. 买卖股票的最佳时机
@@ -63,7 +63,7 @@ import tag.Greedy;
  */
 @Greedy
 @DynamicProgramming
-@ArrayTag
+@Tag_Array
 public class _122_BestTimeToBuyAndSellStockII extends BaseSolution {
 
     public static void main(String[] args) {
