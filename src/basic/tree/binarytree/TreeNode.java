@@ -53,6 +53,29 @@ public class TreeNode {
     }
 
     /**
+     * 利用层序遍历数组生成二叉树
+     * 
+     * @param values  层序遍历的二叉树值数组
+     * @param rootNum 根节点的下标
+     * @param asNull  指代null节点的值，随意选取数组中不存在的值用以指代即可
+     * @return 二叉树根节点
+     */
+    public static TreeNode gen(int[] values, int rootNum, int asNull) {
+        int len = values.length;
+        TreeNode root = values[rootNum] == asNull ? null : new TreeNode(values[rootNum]);
+        if (root != null) {
+            if (rootNum * 2 + 1 < len) {
+                root.left = gen(values, rootNum * 2 + 1);
+            }
+
+            if (rootNum * 2 + 2 < len) {
+                root.right = gen(values, rootNum * 2 + 2);
+            }
+        }
+        return root;
+    }
+
+    /**
      * 层序遍历二叉树，返回层序遍历二叉树值的数组
      * 
      * @param root 二叉树根节点
