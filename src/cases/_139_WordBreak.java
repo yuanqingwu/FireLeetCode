@@ -20,13 +20,17 @@ import tag.Tag_String;
 import tag.TrieTag;
 
 /**
+ * [139. Word Break](https://leetcode.com/problems/word-break/)
+ * <p>
  * Given a string s and a dictionary of strings wordDict, return true if s can
  * be segmented into a space-separated sequence of one or more dictionary words.
  * 
  * Note that the same word in the dictionary may be reused multiple times in the
  * segmentation.
  * <p>
+ * 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。如果可以利用字典中出现的一个或多个单词拼接出 s 则返回 true。
  * 
+ * 注意：不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。
  * <p>
  * Example 1:
  * <p>
@@ -104,6 +108,7 @@ public class _139_WordBreak extends BaseSolution {
      * 否出现在给定的字符串列表需要的时间为O(1)的时间。因此总的时间复杂度为O(n^2).
      * 空间复杂度: O(n), 其中n为字符串长度，我们需要O(n)的空间存放dp值，以及哈希表也需要O(n)的空间，所以总空间复杂度为O(n)
      */
+    @DynamicProgramming(timeComplexity = "O(n^2)", spaceComplexity = "O(n)")
     public boolean wordBreak(String s, List<String> wordDict) {
         int len = s.length();
         boolean[] dp = new boolean[len + 1];
@@ -127,7 +132,7 @@ public class _139_WordBreak extends BaseSolution {
         return dp[len];
     }
 
-    @BFS_BreadthFirstSearch
+    @BFS_BreadthFirstSearch(timeComplexity = "O(n^2)", spaceComplexity = "O(n)")
     public boolean wordBreak_BFS(String s, List<String> wordDict) {
         Queue<Integer> queue = new LinkedList<>();
         queue.add(0);
@@ -160,12 +165,12 @@ public class _139_WordBreak extends BaseSolution {
         return false;
     }
 
-    @DFS_DepthFirstSearch
     public boolean wordBreak_DFS(String s, List<String> wordDict) {
         boolean[] visited = new boolean[s.length() + 1];
         return dfs(s, 0, wordDict, visited);
     }
 
+    @DFS_DepthFirstSearch(timeComplexity = "O(n^2)", spaceComplexity = "O(n)")
     private boolean dfs(String s, int start, List<String> wordDict, boolean[] visited) {
         for (String word : wordDict) {
             int nextStart = start + word.length();

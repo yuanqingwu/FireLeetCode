@@ -9,7 +9,7 @@ import java.util.List;
 import tag.BackTracking;
 
 /**
- * 46. 全排列
+ * [46. 全排列 Permutations](https://leetcode.cn/problems/permutations)
  * <p>
  * Given an array nums of distinct integers, return all the possible
  * permutations. You can return the answer in any order.
@@ -64,6 +64,7 @@ public class _46_Permutations extends BaseSolution {
     List<List<Integer>> res = new ArrayList<>();
 
     public List<List<Integer>> permute(int[] nums) {
+        // 利用used数组来标记此字符是否使用过
         boolean[] used = new boolean[nums.length];
         backtracking(nums, 0, used);
         return res;
@@ -73,6 +74,7 @@ public class _46_Permutations extends BaseSolution {
     public void backtracking(int[] nums, int start, boolean[] used) {
 
         if (path.size() == nums.length) {
+            // 注意这里需要新建一个ArrayList，否则后续path改变会影响res中的结果
             res.add(new ArrayList<>(path));
             return;
         }
