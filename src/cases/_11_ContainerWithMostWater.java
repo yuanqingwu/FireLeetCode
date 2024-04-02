@@ -7,7 +7,7 @@ import tag.Greedy;
 import tag.TwoPointers;
 
 /**
- * 11. 盛最多水的容器
+ * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
  * <p>
  * You are given an integer array height of length n. There are n vertical lines
  * drawn such that the two endpoints of the ith line are (i, 0) and (i,
@@ -67,6 +67,7 @@ public class _11_ContainerWithMostWater extends BaseSolution {
         assertEquals(1, maxArea(height2));
     }
 
+    @TwoPointers(timeComplexity = "O(n)", spaceComplexity = "O(1)")
     public int maxArea(int[] height) {
         int max = 0;
         int i = 0;

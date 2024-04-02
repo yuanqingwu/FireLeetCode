@@ -7,7 +7,7 @@ import tag.DynamicProgramming;
 import tag.TwoPointers;
 
 /**
- * 42. 接雨水
+ * [42.接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
  * <p>
  * Given n non-negative integers representing an elevation map where the width
  * of each bar is 1, compute how much water it can trap after raining.
@@ -46,10 +46,11 @@ public class _42_TrappingRainWrater extends BaseSolution {
     @Override
     void solution() {
         int[] height = new int[] { 4, 2, 0, 3, 2, 5 };
-        assert trap(height) == 9;
         Assert.assertEquals(9, trap(height));
+        Assert.assertEquals(9, trap1(height));
     }
 
+    @DynamicProgramming(timeComplexity = "O(n)", spaceComplexity = "O(n)")
     public int trap(int[] height) {
         int len = height.length;
         int[] maxl = new int[len];
@@ -70,6 +71,21 @@ public class _42_TrappingRainWrater extends BaseSolution {
             }
         }
         return max;
+    }
+
+    @TwoPointers(timeComplexity = "O(n)", spaceComplexity = "O(1)")
+    public int trap1(int[] height) {
+        int len = height.length;
+        int l = 0, r = len - 1;
+        int lmax = 0, rmax = 0;
+        int res = 0;
+
+        while (l < r) {
+            lmax = Math.max(lmax, height[l]);
+            rmax = Math.max(rmax, height[r]);
+            res += lmax <= rmax ? lmax - height[l++] : rmax - height[r--];
+        }
+        return res;
     }
 
 }
