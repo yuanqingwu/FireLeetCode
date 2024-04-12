@@ -7,8 +7,8 @@ import tag.Greedy;
 import tag.Tag_Array;
 
 /**
- * [122. 买卖股票的最佳时机
- * II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii)
+ * [122. Best Time to Buy and Sell Stock II
+ * 买卖股票的最佳时机II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii)
  * <p>
  * You are given an integer array prices where prices[i] is the price of a given
  * stock on the ith day.
@@ -89,8 +89,32 @@ public class _122_BestTimeToBuyAndSellStockII extends BaseSolution {
         return res;
     }
 
-    @DynamicProgramming(timeComplexity = "n", spaceComplexity = "1")
+    @DynamicProgramming(timeComplexity = "n", spaceComplexity = "n")
     public int maxProfit1(int[] prices) {
+        int len = prices.length;
+        if (len < 2) {
+            return 0;
+        }
+
+        // 0：持有现金
+        // 1：持有股票
+        // dp[i][j] 表示到下标为 i 的这一天，持股状态为 j 时，我们手上拥有的最大现金数。
+        int[][] dp = new int[len][2];
+
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+
+        for (int i = 1; i < len; i++) {
+            // 这两行调换顺序也是可以的
+            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
+            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
+        }
+        return dp[len - 1][0];
+    }
+
+    // 滚动变量，优化空间
+    @DynamicProgramming(timeComplexity = "n", spaceComplexity = "1")
+    public int maxProfit2(int[] prices) {
         int len = prices.length;
         int buy = -prices[0];
         int sale = 0;
