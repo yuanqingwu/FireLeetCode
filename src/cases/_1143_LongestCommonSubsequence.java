@@ -6,6 +6,9 @@ import tag.DynamicProgramming;
 import tag.Tag_String;
 
 /**
+ * [1143. Longest Common Subsequence
+ * 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
+ * <p>
  * Given two strings text1 and text2, return the length of their longest common
  * subsequence. If there is no common subsequence, return 0.
  * 
@@ -26,26 +29,26 @@ import tag.Tag_String;
  * 
  * <p>
  * Example 1:
- * 
+ * <p>
  * Input: text1 = "abcde", text2 = "ace"
  * Output: 3
  * Explanation: The longest common subsequence is "ace" and its length is 3.
  * <p>
  * Example 2:
- * 
+ * <p>
  * Input: text1 = "abc", text2 = "abc"
  * Output: 3
  * Explanation: The longest common subsequence is "abc" and its length is 3.
  * <p>
  * Example 3:
- * 
+ * <p>
  * Input: text1 = "abc", text2 = "def"
  * Output: 0
  * Explanation: There is no such common subsequence, so the result is 0.
  * 
  * <p>
  * Constraints:
- * 
+ * <p>
  * 1 <= text1.length, text2.length <= 1000
  * text1 and text2 consist of only lowercase English characters.
  * 
