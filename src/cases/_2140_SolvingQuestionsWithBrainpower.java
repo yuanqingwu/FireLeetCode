@@ -6,16 +6,19 @@ import tag.Tag_Array;
 import tag.DynamicProgramming;
 
 /**
+ * [2140. Solving Questions With Brainpower
+ * 解决智力问题](https://leetcode.com/problems/solving-questions-with-brainpower/)
+ * <p>
  * You are given a 0-indexed 2D integer array questions where questions[i] =
  * [pointsi, brainpoweri].
- * 
+ * <p>
  * The array describes the questions of an exam, where you have to process the
  * questions in order (i.e., starting from question 0) and make a decision
  * whether to solve or skip each question. Solving question i will earn you
  * pointsi points but you will be unable to solve each of the next brainpoweri
  * questions. If you skip question i, you get to make the decision on the next
  * question.
- * 
+ * <p>
  * - For example, given questions = [[3, 2], [4, 3], [4, 4], [2, 5]]:
  * - If question 0 is solved, you will earn 3 points but you will be unable to
  * solve questions 1 and 2.
@@ -25,47 +28,52 @@ import tag.DynamicProgramming;
  * Return the maximum points you can earn for the exam.
  * <p>
  * 给你一个下标从 0 开始的二维整数数组 questions ，其中 questions[i] = [pointsi, brainpoweri] 。
- * 
+ * <p>
  * 这个数组表示一场考试里的一系列题目，你需要 按顺序 （也就是从问题 0 开始依次解决），针对每个问题选择 解决 或者 跳过 操作。解决问题 i 将让你
  * 获得 pointsi 的分数，但是你将 无法 解决接下来的 brainpoweri 个问题（即只能跳过接下来的 brainpoweri
  * 个问题）。如果你跳过问题 i ，你可以对下一个问题决定使用哪种操作。
- * 
+ * <p>
  * 比方说，给你 questions = [[3, 2], [4, 3], [4, 4], [2, 5]] ：
  * 如果问题 0 被解决了， 那么你可以获得 3 分，但你不能解决问题 1 和 2 。
  * 如果你跳过问题 0 ，且解决问题 1 ，你将获得 4 分但是不能解决问题 2 和 3 。
  * 请你返回这场考试里你能获得的 最高 分数。
  * <p>
  * Example 1:
- * 
+ * <p>
  * Input: questions = [[3,2],[4,3],[4,4],[2,5]]
  * Output: 5
+ * <p>
  * Explanation: The maximum points can be earned by solving questions 0 and 3.
+ * <p>
  * - Solve question 0: Earn 3 points, will be unable to solve the next 2
  * questions
  * - Unable to solve questions 1 and 2
  * - Solve question 3: Earn 2 points
+ * <p>
  * Total points earned: 3 + 2 = 5. There is no other way to earn 5 or more
  * points.
  * 
  * <p>
  * 
  * Example 2:
- * 
+ * <p>
  * Input: questions = [[1,1],[2,2],[3,3],[4,4],[5,5]]
  * Output: 7
+ * <p>
  * Explanation: The maximum points can be earned by solving questions 1 and 4.
+ * <p>
  * - Skip question 0
  * - Solve question 1: Earn 2 points, will be unable to solve the next 2
  * questions
  * - Unable to solve questions 2 and 3
  * - Solve question 4: Earn 5 points
+ * <p>
  * Total points earned: 2 + 5 = 7. There is no other way to earn 7 or more
  * points.
  * 
  * <p>
- * 
  * Constraints:
- * 
+ * <p>
  * 1 <= questions.length <= 105
  * questions[i].length == 2
  * 1 <= pointsi, brainpoweri <= 105
@@ -94,6 +102,9 @@ public class _2140_SolvingQuestionsWithBrainpower extends BaseSolution {
 
     /**
      * 填表法适用于大多数 DP：通过当前状态所依赖的状态，来计算当前状态。
+     * 
+     * 从无后效性的角度考虑动态规划「状态」的定义。对于每一道题目，解决与否会影响到后面一定数量题目的结果，
+     * 但不会影响到前面题目的解决。因此我们可以考虑从反方向定义「状态」，即考虑解决每道题本身及以后的题目可以获得的最高分数。
      * 
      * 设有 n 个问题，定义 dp[i] 表示解决区间 [i,n−1] 内的问题可以获得的最高分数。
      * 倒序遍历问题列表，对于第 i 个问题，我们有两种决策：跳过或解决。
@@ -150,5 +161,23 @@ public class _2140_SolvingQuestionsWithBrainpower extends BaseSolution {
 
         // System.out.println(Arrays.toString(dp));
         // return dp[len - 1];
+    }
+
+    @DynamicProgramming(timeComplexity = "O(n)", spaceComplexity = "O(n)")
+    public long mostPoints1(int[][] questions) {
+        int len = questions.length;
+        long[] dp = new long[len + 1];
+        // dp[i] 来表示解决第 i 道题目及以后的题目可以获得的最高分数。
+        // 根据是否选择解决第 i 道题目，会有以下两种情况：
+        // 1. 不解决第 i 道题目，此时 dp[i]=dp[i+1]
+        // 2. 解决第 i 道题目，我们只能解决下标大于 i+brainpower[i]的题目，而此时根据 dp
+        // 数组的定义，解决这些题目的最高分数为 dp[i+brainpower[i]+1],（当 i≥n 的情况下，我们认为
+        // dp[i]=0）。
+
+        // 状态转移方程：dp[i]=max(dp[i+1],points[i]+dp[min(n,i+brainpower[i]+1)]).
+        for (int i = len - 1; i >= 0; i--) {
+            dp[i] = Math.max(dp[i + 1], questions[i][0] + dp[Math.min(len, i + questions[i][1] + 1)]);
+        }
+        return dp[0];
     }
 }
