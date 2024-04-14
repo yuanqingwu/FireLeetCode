@@ -10,6 +10,9 @@ import tag.DynamicProgramming;
 import tag.Greedy;
 
 /**
+ * [300. Longest Increasing Subsequence
+ * 最长递增子序列](https://leetcode.com/problems/longest-increasing-subsequence/)
+ * <p>
  * Given an integer array nums, return the length of the longest strictly
  * increasing subsequence.
  * <p>
@@ -20,21 +23,25 @@ import tag.Greedy;
  * 
  * <p>
  * Example 1:
+ * <p>
  * Input: nums = [10,9,2,5,3,7,101,18]
  * Output: 4
+ * <p>
  * Explanation: The longest increasing subsequence is [2,3,7,101], therefore the
  * length is 4.
  * <p>
  * Example 2:
+ * <p>
  * Input: nums = [0,1,0,3,2,3]
  * Output: 4
  * <p>
  * Example 3:
+ * <p>
  * Input: nums = [7,7,7,7,7,7,7]
  * Output: 1
  * <p>
  * Constraints:
- * 
+ * <p>
  * 1 <= nums.length <= 2500
  * -104 <= nums[i] <= 104
  */
@@ -91,14 +98,19 @@ public class _300_LongestIncreasingSubsequence extends BaseSolution {
     public int lengthOfLIS1(int[] nums) {
         int maxValue = 0;
         int len = nums.length;
+        // dp[i] 表示：以 nums[i] 结尾 的「上升子序列」的长度。注意：这个定义中 nums[i] 必须被选取，且必须是这个子序列的最后一个元素；
         int[] dp = new int[len];
         for (int i = 0; i < len; i++) {
+            // 1 个字符显然是长度为 1 的上升子序列。
             dp[i] = 1;
             for (int j = 0; j < i; j++) {
+                // 如果一个较大的数接在较小的数后面，就会形成一个更长的子序列。只要 nums[i] 严格大于在它位置之前的某个数，那么 nums[i]
+                // 就可以接在这个数后面形成一个更长的上升子序列。
                 if (nums[i] > nums[j]) {
                     dp[i] = Math.max(dp[i], dp[j] + 1);
                 }
             }
+            // 最后一个状态值只表示以 nums[len - 1] 结尾的「上升子序列」的长度，状态数组 dp 的最大值才是题目要求的结果。
             maxValue = Math.max(maxValue, dp[i]);
         }
         return maxValue;
