@@ -6,14 +6,15 @@ import tag.Tag_Math;
 import tag.Recursion;
 
 /**
+ * [2. Add Two Numbers 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+ * <p>
  * You are given two non-empty linked lists representing two non-negative
  * integers. The digits are stored in reverse order, and each of their nodes
  * contains a single digit. Add the two numbers and return the sum as a linked
  * list.
- * 
+ * <p>
  * You may assume the two numbers do not contain any leading zero, except the
  * number 0 itself.
- *
  * <p>
  * 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
  * 
@@ -25,12 +26,12 @@ import tag.Recursion;
  * Example:
  * Input: l1 = [2,4,3], l2 = [5,6,4]
  * Output: [7,0,8]
+ * <p>
  * Explanation: 342 + 465 = 807.
- * 
  * <p>
  * 
  * Constraints:
- * 
+ * <p>
  * The number of nodes in each linked list is in the range [1, 100].
  * 0 <= Node.val <= 9
  * It is guaranteed that the list represents a number that does not have leading
@@ -95,7 +96,7 @@ public class _2_AddTwoNumbers extends BaseSolution {
     /**
      * recursion solution
      */
-    @Recursion
+    @Recursion(timeComplexity = "O(n)", spaceComplexity = "O(n)")
     public ListNode addTwoNumbersRecursion(ListNode l1, ListNode l2) {
         return addTwo(l1, l2, 0);
     }
