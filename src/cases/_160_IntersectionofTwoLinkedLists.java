@@ -8,6 +8,7 @@ import tag.TwoPointers;
 
 /**
  * [160 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists)
+ * <p>
  * Given the heads of two singly linked-lists headA and headB, return the node
  * at which the two lists intersect. If the two linked lists have no
  * intersection at all, return null.
@@ -28,8 +29,6 @@ import tag.TwoPointers;
  * 0 <= skipB < n
  * intersectVal is 0 if listA and listB do not intersect.
  * intersectVal == listA[skipA] == listB[skipB] if listA and listB intersect.
- * 
- * 
  */
 @Tag_LinkedList
 @TwoPointers

@@ -9,7 +9,8 @@ import tag.SlidingWindow;
 import tag.Tag_String;
 
 /**
- * 3. 无重复字符的最长子串
+ * [3. Longest Substring Without Repeating Characters
+ * 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters)
  * <p>
  * Given a string, find the length of the longest substring without repeating
  * characters.
@@ -72,11 +73,13 @@ public class _3_LongestSubString extends BaseSolution {
     public int lengthOfLongestSubstring(String s) {
         if (s.length() == 0)
             return 0;
+        // 其中 key 值为字符，value 值为字符位置
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         int max = 0;
         int left = 0;
         for (int i = 0; i < s.length(); i++) {
             if (map.containsKey(s.charAt(i))) {
+                // 更新无重复字符子串的起始位置
                 left = Math.max(left, map.get(s.charAt(i)) + 1);
             }
             map.put(s.charAt(i), i);

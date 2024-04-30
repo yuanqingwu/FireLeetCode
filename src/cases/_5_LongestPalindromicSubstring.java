@@ -6,7 +6,8 @@ import tag.DynamicProgramming;
 import tag.Tag_String;
 
 /**
- * 5. 最长回文子串
+ * [5. Longest Palindromic Substring
+ * 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
  * <p>
  * Given a string s, return the longest palindromic substring in s.
  * <p>
@@ -50,6 +51,7 @@ public class _5_LongestPalindromicSubstring extends BaseSolution {
         if (len < 2) {
             return s;
         }
+        // dp[i][j] 表示 s[i..j] 是否是回文串
         boolean[][] dp = new boolean[len][len];
         char[] charArray = s.toCharArray();
         int begin = 0;
@@ -63,6 +65,7 @@ public class _5_LongestPalindromicSubstring extends BaseSolution {
                         dp[i][j] = dp[i + 1][j - 1];
                     }
                 }
+                // 只要 dp[i][j] == true 成立，就表示子串 s[i..j] 是回文，此时记录回文长度和起始位置
                 if (dp[i][j] && j - i + 1 > max) {
                     begin = i;
                     max = j - i + 1;
@@ -72,7 +75,7 @@ public class _5_LongestPalindromicSubstring extends BaseSolution {
         return s.substring(begin, begin + max);
     }
 
-    // center spread
+    // center spread 中心扩散法
     public String longestPalindrome1(String s) {
         int len = s.length();
         char[] ss = s.toCharArray();
