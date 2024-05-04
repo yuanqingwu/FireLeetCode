@@ -16,7 +16,7 @@ import tag.Recursion;
  * <p>
  * 遍历形式有：前序遍历、中序遍历、后序遍历
  * <p>
- * 遍历方法可以分为：递归法、迭代法、Morris法
+ * 每种遍历形式的实现方法都可以分为：递归法、迭代法、Morris法
  */
 public class BinaryTreeBasicFunc {
 
@@ -44,7 +44,11 @@ public class BinaryTreeBasicFunc {
         System.out.println("Morris法中序遍历:" + traversalInOrder_Morris(root));
         System.out.println("Morris法后序遍历:" + traversalPostOrder_Morris(root));
 
-        System.out.println(maxDepth(root));
+        System.out.println("maxDepth:" + maxDepth(root));
+        System.out.println("maxDepth_BFS:" + maxDepth_BFS(root));
+        System.out.println("isSymmetric:" + isSymmetric(root));
+        System.out.println("invertTree:" + invertTree(root));
+
     }
 
     /**
@@ -359,7 +363,7 @@ public class BinaryTreeBasicFunc {
         return list;
     }
 
-    public static void addPath(List<Integer> res, TreeNode node) {
+    private static void addPath(List<Integer> res, TreeNode node) {
         int count = 0;
         while (node != null) {
             ++count;
